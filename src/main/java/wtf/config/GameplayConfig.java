@@ -37,6 +37,7 @@ public class GameplayConfig extends AbstractConfig {
 	public static boolean miningSpeedEnabled;
 	public static boolean miningStoneFractures;
 	public static boolean miningOreFractures;
+	public static boolean allowPlacementOfOres;
 
 	//public static boolean enableQuickCrafting;
 
@@ -75,6 +76,7 @@ public class GameplayConfig extends AbstractConfig {
 	miningSpeedEnabled = config.get("Mining", "Enable mining speed modification (values are set in the Stone Registry)", true).getBoolean();
 	miningStoneFractures = config.get("Mining", "Stone fractures upon mining (individual stones disabled in the stone registry)", true).getBoolean();
 	miningOreFractures = config.get("Mining", "Ores fracture adjacent stone upon mining (Individual blocks can be removed from the config list)", true).getBoolean();
+	allowPlacementOfOres = config.get("Mining", "Allow placement of ores when fracturing is enabled", false).getBoolean();
 	fracSimple = config.get("Mining", "Use simplified fracturing (always fractures all 6 adjacent blocks)", false).getBoolean();
 
 	String[] defaultOres = {Blocks.COAL_ORE.getRegistryName().toString(), Blocks.IRON_ORE.getRegistryName().toString(), Blocks.GOLD_ORE.getRegistryName().toString(),

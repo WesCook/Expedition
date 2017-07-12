@@ -40,7 +40,7 @@ public class EventListenerRegistry {
 				MinecraftForge.EVENT_BUS.register(new ListenerMiningSpeed());
 				Core.coreLog.info("mining speed listener registered");
 			}
-			if (GameplayConfig.miningOreFractures){
+			if (GameplayConfig.miningOreFractures && !GameplayConfig.allowPlacementOfOres){
 				MinecraftForge.EVENT_BUS.register(new ListenerOreFrac());
 				Core.coreLog.info("ore fracturing listener registered");
 			}
